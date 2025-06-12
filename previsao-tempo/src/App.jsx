@@ -1,15 +1,16 @@
 import React from 'react'
 import env from 'react-dotenv'
-import weatherCliente from './utils/weatherCliente'
+import "primereact/resources/themes/lara-light-teal/theme.css";
+import "primeflex/primeflex.min.css";
+import "primeicons/primeicons.css";
+import Busca from './components/Busca';
 
 const App = () => {
-  weatherCliente.get('/search', {
-      params: {
-        query: "são paulo"
-      }
-    }).then(result => console.log({dados: result.data}))
+  const expressaoJSX = <Busca />
   return (
-    <div>Olhar no Console log</div>
+    <div>
+      {expressaoJSX}
+    </div>
   )
 }
 
