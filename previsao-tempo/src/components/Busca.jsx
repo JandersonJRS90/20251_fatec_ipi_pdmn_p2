@@ -46,7 +46,7 @@ const Busca = () => {
       {
         Object.keys(resultados).map((id, index) => (
             <div 
-            key={id}
+            key={striptags(id)}
             className='my-2 border-round-md text-center border border-1 font-bold'>
               <div
                 className='p-3'
